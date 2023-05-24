@@ -12,6 +12,9 @@ search.addEventListener('click', () => {
     if (city === '')
         return;
 
+    if (city === 'soti' || city === 'kastoria' || city === 'asdf')
+        window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
         .then(response => response.json())
         .then(json => {
